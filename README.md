@@ -1,18 +1,19 @@
-Proyecto Backend con Spring Boot
+Backend Project with Spring Boot
 
-Este proyecto es un **backend desarrollado con Spring Boot 3**, que expone una API REST para la gestión de **usuarios, órdenes y productos**.  
+This project is a backend application built with Spring Boot 3, which exposes a REST API for managing users, orders, and products.  
 
-Características principales
-- Arquitectura basada en **Controlador – Servicio – Repositorio**.  
-- Datos de prueba cargados desde un archivo **JSON** en memoria.  
-- Integración con **MongoDB** mediante Spring Data.  
-- **Unit Tests** implementados para controladores, servicios y modelos.  
-- Endpoints REST para:  
-  - Obtener lista de usuarios.  
-  - Consultar órdenes de un usuario.  
-  - Listar productos de una orden.  
+Main Features
 
-Estructura del proyecto
+Architecture based on Controller – Service – Repository.
+Sample data loaded from a JSON file in memory.
+Integration with MongoDB using Spring Data.
+Unit tests implemented for controllers, services, and models.
+REST endpoints to:
+Get the list of users.
+Retrieve a user's orders.
+List products from a specific order.
+
+Project Structure
 
 src/main/java/org/proyectdemo/
 ├── controller # Controladores REST
@@ -31,12 +32,12 @@ src/test/java/org/proyectdemo/
 └── UsuarioServiceTest
 
 
-Ejemplo de Endpoints
+Example Endpoints
 - `GET /usuarios/picker` → Lista de usuarios simplificada.  
 - `GET /usuarios/{id}/ordenes/picker` → Órdenes de un usuario.  
 - `GET /usuarios/{idUsuario}/ordenes/{idOrden}/productos` → Productos de una orden.  
 
-Tecnologías utilizadas
+Technologies Used
 - Java 17 
 - Spring Boot 3  
 - Spring Web  
@@ -46,17 +47,17 @@ Tecnologías utilizadas
 - Mockito (para mocks en los tests)  
 
  Unit Tests
-El proyecto cuenta con pruebas unitarias para asegurar la calidad del código y el correcto funcionamiento de los componentes:  
+The project includes unit tests to ensure code quality and proper functionality:
 
 - Modelos:`OrdenTest`, `ProductoTest`, `UsuarioTest`  
 - Controladores: `UsuarioControllerTest`  
 - Servicios: `UsuarioServiceTest`, `UsuarioServiceMongoDbTest`  
-
-Para ejecutar los tests:  
+  
+To run the tests:
 ```bash
 mvn test
 
-Arquitectura del Proyecto
+Project Architecture
 
 flowchart TD
     C[Cliente / Frontend] -->|HTTP REST| A[Controladores REST]
@@ -65,17 +66,17 @@ flowchart TD
     D --> M[(MongoDB)]
     B --> J[Datos JSON de prueba]
 
-Ejecucion
+Run
 mvn spring-boot:run
 
-Ejecucion de Test
+Run the Test
 mvn test
 
-El servicio quedará disponible en:
+The service will be available at:
  http://localhost:8080
 
-Contacto
-Celular: +54 9 341 586-3212
+Contact
+Phone Number: +54 9 341 586-3212
 
 Email: bpstyga@gmail.com
 
